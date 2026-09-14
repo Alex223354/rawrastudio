@@ -117,16 +117,6 @@ img {
   text-transform: uppercase;
 }
 
-.page-hero {
-  padding: 8rem 2rem 3rem;
-  text-align: center;
-}
-
-.page-hero h1 {
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  letter-spacing: 0.05em;
-}
-
 /* ---------- Statement ---------- */
 
 .statement {
@@ -258,28 +248,6 @@ img {
   font-size: 0.8rem;
   color: #777;
   line-height: 1.4;
-}
-
-/* ---------- Values (studio page) ---------- */
-
-.values {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2rem 2rem 6rem;
-}
-
-.value h2 {
-  font-size: 1rem;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.75rem;
-}
-
-.value p {
-  color: #444;
-  font-size: 0.95rem;
 }
 
 /* ---------- Contact ---------- */
@@ -421,9 +389,6 @@ img {
   .portfolio-item.pf-4 {
     grid-column: span 1;
   }
-  .values {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 480px) {
@@ -540,4 +505,98 @@ img {
 
 .cookie-btn:hover {
   opacity: 0.75;
+}
+
+/* ---------- Founder / about ---------- */
+
+.founder {
+  position: relative;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  background: #41271b;
+  color: #efe4d8;
+}
+
+.founder-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 6rem 4rem;
+  align-content: center;
+}
+
+.founder-name {
+  font-family: "Mrs Saint Delafield", cursive;
+  font-size: 2.5rem;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.founder-title {
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #b89e88;
+  margin-bottom: 1.75rem;
+}
+
+.founder-intro p:not(.founder-name):not(.founder-title),
+.founder-more p {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: #ddcdbe;
+  margin-bottom: 1.25rem;
+}
+
+.founder-photo {
+  min-height: 480px;
+}
+
+.founder-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.founder-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(239, 228, 216, 0.35);
+  background: rgba(65, 39, 27, 0.4);
+  color: #efe4d8;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.founder-nav:hover {
+  background: rgba(65, 39, 27, 0.75);
+}
+
+.founder-nav--prev {
+  left: 1.5rem;
+}
+
+.founder-nav--next {
+  right: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .founder {
+    grid-template-columns: 1fr;
+  }
+  .founder-photo {
+    order: -1;
+    min-height: 360px;
+  }
+  .founder-text {
+    grid-template-columns: 1fr;
+    padding: 3.5rem 2rem;
+  }
 }
