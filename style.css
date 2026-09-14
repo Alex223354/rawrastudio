@@ -513,8 +513,8 @@ img {
   position: relative;
   display: grid;
   grid-template-columns: 3fr 2fr;
-  background: #41271b;
-  color: #efe4d8;
+  background: #fff;
+  color: #111;
 }
 
 .founder-text {
@@ -528,7 +528,7 @@ img {
 .founder-name {
   font-family: "Mrs Saint Delafield", cursive;
   font-size: 2.5rem;
-  color: #fff;
+  color: #111;
   line-height: 1.2;
 }
 
@@ -536,7 +536,7 @@ img {
   font-size: 0.7rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #b89e88;
+  color: #888;
   margin-bottom: 1.75rem;
 }
 
@@ -544,7 +544,7 @@ img {
 .founder-more p {
   font-size: 0.9rem;
   line-height: 1.75;
-  color: #ddcdbe;
+  color: #444;
   margin-bottom: 1.25rem;
 }
 
@@ -557,34 +557,6 @@ img {
   height: 100%;
   object-fit: cover;
   display: block;
-}
-
-.founder-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 5;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 1px solid rgba(239, 228, 216, 0.35);
-  background: rgba(65, 39, 27, 0.4);
-  color: #efe4d8;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.founder-nav:hover {
-  background: rgba(65, 39, 27, 0.75);
-}
-
-.founder-nav--prev {
-  left: 1.5rem;
-}
-
-.founder-nav--next {
-  right: 1.5rem;
 }
 
 @media (max-width: 900px) {
