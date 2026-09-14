@@ -16,7 +16,7 @@ if (navToggle && mainNav) {
 const contactForm = document.getElementById("contact-form");
 
 if (contactForm) {
-  contactForm.addEventListener("submit", (event) => {
+  contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     let status = contactForm.querySelector(".form-status");
@@ -26,8 +26,29 @@ if (contactForm) {
       contactForm.appendChild(status);
     }
 
-    status.textContent = "Gracias por tu mensaje. Te responderemos pronto.";
-    contactForm.reset();
+    const submitButton = contactForm.querySelector("button[type=submit]");
+    submitButton.disabled = true;
+    status.textContent = "Enviando...";
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(contactForm),
+      });
+      const result = await response.json();
+
+      if (result.success) {
+        status.textContent = "Gracias por tu mensaje. Te responderemos pronto.";
+        contactForm.reset();
+      } else {
+        status.textContent = "No se pudo enviar el mensaje. Inténtalo de nuevo.";
+      }
+    } catch (error) {
+      status.textContent = "No se pudo enviar el mensaje. Inténtalo de nuevo.";
+    } finally {
+      submitButton.disabled = false;
+    }
   });
 }
 
