@@ -73,6 +73,7 @@ img {
 .home .main-nav a {
   font-family: "Cormorant Garamond", serif;
   font-weight: 400;
+  font-size: 1.15rem;
 }
 
 .main-nav a.active,
