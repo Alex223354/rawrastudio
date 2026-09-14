@@ -30,3 +30,22 @@ if (contactForm) {
     contactForm.reset();
   });
 }
+
+const COOKIE_CONSENT_KEY = "rawra_cookie_consent";
+const cookieBanner = document.getElementById("cookie-banner");
+
+if (cookieBanner) {
+  const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
+
+  if (!consent) {
+    requestAnimationFrame(() => cookieBanner.classList.add("visible"));
+  }
+
+  const hideBanner = (value) => {
+    localStorage.setItem(COOKIE_CONSENT_KEY, value);
+    cookieBanner.classList.remove("visible");
+  };
+
+  document.getElementById("cookie-accept").addEventListener("click", () => hideBanner("accepted"));
+  document.getElementById("cookie-reject").addEventListener("click", () => hideBanner("rejected"));
+}
