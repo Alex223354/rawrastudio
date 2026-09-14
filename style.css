@@ -648,6 +648,7 @@ img {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 2rem;
+  align-items: start;
 }
 
 .gallery-row img,
@@ -697,6 +698,15 @@ img {
 
 .g-square {
   aspect-ratio: 1 / 1;
+}
+
+@media (min-width: 641px) {
+  .g-offset-down {
+    margin-top: 3.5rem;
+  }
+  .g-offset-up {
+    margin-top: -2rem;
+  }
 }
 
 @media (max-width: 640px) {
