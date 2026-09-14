@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa Marina, Castelldefels — Rawra Studio</title>
+  <meta name="description" content="Casa Marina, Castelldefels — proyecto exterior y paisajismo de Rawra Studio.">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <img src="assets/logo-mark-real.png" alt="" class="logo-icon">
+      <img src="assets/wordmark.png" alt="Rawra Studio" class="logo-wordmark">
+    </a>
+    <nav class="main-nav">
+      <a href="studio.html">Estudio</a>
+      <a href="index.html#proyectos">Proyectos</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <a href="index.html#proyectos" class="project-back">&larr; Proyectos</a>
+
+  <section class="project-hero">
+    <img src="assets/projects/casa-marina.jpg" alt="Casa Marina, Castelldefels">
+  </section>
+
+  <section class="project-intro">
+    <span class="portfolio-tag">Landscape</span>
+    <h1>Casa Marina, Castelldefels</h1>
+    <p class="project-meta">Proyecto exterior y paisajismo</p>
+    <p class="project-services">Diseño exterior · Paisajismo · Mobiliario · Iluminación</p>
+    <p class="project-description">
+      Una terraza frente al mar en Castelldefels pensada para alargar las
+      noches de verano. Cerámica artesanal, hierro forjado y vegetación
+      mediterránea conviven bajo una iluminación cálida que convierte el
+      exterior en la habitación favorita de la casa.
+    </p>
+  </section>
+
+  <a href="casa-manila.html" class="project-next">
+    <span>Siguiente proyecto</span>
+    <strong>Casa Manila, Barcelona &rarr;</strong>
+  </a>
+
+  <section id="contacto" class="contact">
+    <h2>Hablemos</h2>
+    <p>Para colaboraciones, encargos o simplemente para saludar — nos encantaría saber de ti.</p>
+    <form class="contact-form" id="contact-form">
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" required placeholder="tu@email.com">
+      <label for="message">Mensaje</label>
+      <textarea id="message" name="message" required placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-questions">
+      <p>¿Qué pasaría si diseñáramos pensando primero en quién lo usará?</p>
+      <p>¿Y si cada proyecto empezara por preguntar «por qué», antes que «cómo»?</p>
+    </div>
+    <div class="footer-bottom">
+      <img src="assets/logo-mark-real.png" alt="Rawra Studio" class="footer-logo">
+      <p>&copy; <span id="year"></span> Rawra Studio. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <div class="cookie-banner" id="cookie-banner">
+    <p>Usamos cookies propias para mejorar tu experiencia en este sitio. Puedes aceptarlas o rechazarlas.</p>
+    <div class="cookie-actions">
+      <button type="button" id="cookie-reject" class="cookie-btn cookie-btn-secondary">Rechazar</button>
+      <button type="button" id="cookie-accept" class="cookie-btn cookie-btn-primary">Aceptar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

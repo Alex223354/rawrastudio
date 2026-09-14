@@ -572,3 +572,93 @@ img {
     padding: 3.5rem 2rem;
   }
 }
+
+/* ---------- Project detail pages ---------- */
+
+.project-back {
+  display: inline-block;
+  margin: 2rem 2rem 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.project-back:hover {
+  color: #111;
+}
+
+.project-hero {
+  margin: 1.5rem 0 0;
+}
+
+.project-hero img {
+  width: 100%;
+  max-height: 80vh;
+  object-fit: cover;
+  display: block;
+}
+
+.project-intro {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 5rem;
+  text-align: center;
+}
+
+.project-intro .portfolio-tag {
+  margin-bottom: 0.75rem;
+}
+
+.project-intro h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.project-meta {
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.project-services {
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 2rem;
+}
+
+.project-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.project-next {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  padding: 3rem 2rem;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s ease;
+}
+
+.project-next:hover {
+  background: #fafafa;
+}
+
+.project-next span {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #999;
+}
+
+.project-next strong {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
