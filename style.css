@@ -41,9 +41,24 @@ img {
   border-bottom: 1px solid #eee;
 }
 
+.site-header .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
 .site-header .logo img {
-  height: 48px;
+  height: 42px;
   width: auto;
+}
+
+.logo-text {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #111;
 }
 
 .main-nav {
@@ -384,6 +399,13 @@ img {
   }
   .values {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
   }
 }
 
