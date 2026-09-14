@@ -70,6 +70,11 @@ img {
   padding-bottom: 2px;
 }
 
+.home .main-nav a {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+}
+
 .main-nav a.active,
 .main-nav a:hover {
   border-bottom: 1px solid #111;
