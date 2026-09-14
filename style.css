@@ -635,6 +635,32 @@ img {
   color: #444;
 }
 
+.project-gallery {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem 5rem;
+}
+
+.gallery-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.gallery-pair img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .gallery-pair {
+    grid-template-columns: 1fr;
+  }
+}
+
 .project-next {
   display: flex;
   flex-direction: column;
