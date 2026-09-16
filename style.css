@@ -265,6 +265,35 @@ img {
   line-height: 1.4;
 }
 
+/* ---------- Legal pages ---------- */
+
+.legal {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 6rem 2rem 5rem;
+}
+
+.legal h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.legal-updated {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 2.5rem;
+}
+
+.legal p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 1.25rem;
+}
+
 /* ---------- Contact ---------- */
 
 .contact {
@@ -372,23 +401,94 @@ img {
   margin-bottom: 0.75rem;
 }
 
+.footer-wordmark {
+  height: 20px;
+  width: auto;
+  margin: 0 auto 3.5rem;
+}
+
+.footer-links {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 0;
+  border-top: 1px solid #eee;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  text-align: left;
+}
+
+.footer-col-title {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 1.1rem;
+}
+
+.footer-col p {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 0.6rem;
+}
+
+.footer-col a:hover {
+  color: #111;
+  text-decoration: underline;
+}
+
 .footer-bottom {
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   gap: 0.75rem;
   border-top: 1px solid #eee;
   padding-top: 2rem;
 }
 
-.footer-logo {
-  height: 32px;
-  opacity: 0.8;
-}
-
 .footer-bottom p {
   font-size: 0.8rem;
   color: #999;
+  text-align: left;
+}
+
+.footer-top-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: none;
+  color: #444;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.footer-top-btn:hover {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+@media (max-width: 760px) {
+  .footer-links {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
 }
 
 /* ---------- Info block (services / office / contact) ---------- */
