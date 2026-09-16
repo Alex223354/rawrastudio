@@ -52,6 +52,17 @@ if (contactForm) {
   });
 }
 
+const heroVideo = document.querySelector(".hero-video");
+const statementSection = document.querySelector(".statement");
+
+if (heroVideo && statementSection) {
+  setTimeout(() => {
+    if (window.scrollY < 50) {
+      statementSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }, 10000);
+}
+
 const COOKIE_CONSENT_KEY = "rawra_cookie_consent";
 const cookieBanner = document.getElementById("cookie-banner");
 
