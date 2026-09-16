@@ -56,11 +56,13 @@ const heroVideo = document.querySelector(".hero-video");
 const statementSection = document.querySelector(".statement");
 
 if (heroVideo && statementSection) {
+  // matches marble_done_at in assets/video/build_hero_video.py
+  const AUTOSCROLL_DELAY_MS = 3600;
   setTimeout(() => {
     if (window.scrollY < 50) {
       statementSection.scrollIntoView({ behavior: "smooth" });
     }
-  }, 10000);
+  }, AUTOSCROLL_DELAY_MS);
 }
 
 const COOKIE_CONSENT_KEY = "rawra_cookie_consent";

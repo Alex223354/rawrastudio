@@ -8,46 +8,49 @@ LOGO_WHITE = r"C:\Users\AlexGuerrero\rawrastudio\assets\logo-mark-real-dark.png"
 LOGO_BLACK = r"C:\Users\AlexGuerrero\rawrastudio\assets\logo-mark-real.png"
 OUT = r"C:\Users\AlexGuerrero\rawrastudio\assets\video\hero-reel.mp4"
 
-images = [
-    f"{TEX}\\marble.jpg",
-    f"{GALLERY}\\hero.jpg",
-    f"{TEX}\\walnut.jpg",
-    f"{GALLERY}\\05-kitchen-island.jpg",
-    f"{TEX}\\linen.jpg",
-    f"{GALLERY}\\04-living-room.jpg",
-    f"{TEX}\\rattan.jpg",
-    f"{GALLERY}\\13-bathroom-moody.jpg",
+# (image path, seconds shown) -- marble opener is held longer than the rest
+T = 0.4  # crossfade duration between every pair of clips
+clips = [
+    (f"{TEX}\\marble.jpg", 3.6),
+    (f"{GALLERY}\\hero.jpg", 1.6),
+    (f"{TEX}\\walnut.jpg", 1.6),
+    (f"{GALLERY}\\05-kitchen-island.jpg", 1.6),
+    (f"{TEX}\\linen.jpg", 1.6),
+    (f"{GALLERY}\\04-living-room.jpg", 1.6),
+    (f"{TEX}\\rattan.jpg", 1.6),
+    (f"{GALLERY}\\13-bathroom-moody.jpg", 1.6),
 ]
 
-D = 1.6   # seconds each clip is shown
-T = 0.4   # crossfade duration
 W, H = 2200, 1238
+n = len(clips)
 
-n = len(images)
+# cumulative timeline: when each xfade completes (i.e. clip i is fully on screen)
+durations = [d for _, d in clips]
+clip_end = [durations[0]]
+for d in durations[1:]:
+    clip_end.append(clip_end[-1] + d - T)
+total_duration = clip_end[-1]
+
+marble_done_at = clip_end[0]  # when the marble->next crossfade finishes
 
 inputs = []
-for img in images:
-    inputs += ["-loop", "1", "-t", str(D), "-i", img]
-inputs += ["-loop", "1", "-t", "10", "-i", LOGO_BLACK]
-inputs += ["-loop", "1", "-t", "10", "-i", LOGO_WHITE]
+for img, d in clips:
+    inputs += ["-loop", "1", "-t", str(d), "-i", img]
+inputs += ["-loop", "1", "-t", str(total_duration), "-i", LOGO_BLACK]
+inputs += ["-loop", "1", "-t", str(total_duration), "-i", LOGO_WHITE]
 logo_black_idx = n
 logo_white_idx = n + 1
 
-# marble (first clip) is a light background -> black logo until the crossfade
-# into the second clip finishes; white logo for the rest of the reel.
-black_logo_until = round(1 * (D - T) + T, 3)  # end of first crossfade
-
 filters = []
-for i in range(n):
+for i, (img, d) in enumerate(clips):
     filters.append(
         f"[{i}:v]scale={W}:{H}:force_original_aspect_ratio=increase,"
         f"crop={W}:{H},setsar=1,fps=30,format=yuv420p[v{i}]"
     )
 
 prev = "v0"
-cum = D
 for i in range(1, n):
-    offset = round(i * (D - T), 3)
+    offset = round(clip_end[i - 1] - T, 3)
     out_label = f"vx{i}"
     filters.append(
         f"[{prev}][v{i}]xfade=transition=fade:duration={T}:offset={offset}[{out_label}]"
@@ -62,14 +65,15 @@ logo_h = round(260 * H / 1080)
 filters.append(f"[{logo_black_idx}:v]scale=-1:{logo_h}[logob]")
 filters.append(f"[{logo_white_idx}:v]scale=-1:{logo_h}[logow]")
 filters.append(
-    f"[dark][logob]overlay=(W-w)/2:(H-h)/2:enable='lt(t,{black_logo_until})'[step1]"
+    f"[dark][logob]overlay=(W-w)/2:(H-h)/2:enable='lt(t,{round(marble_done_at, 3)})'[step1]"
 )
 filters.append(
-    f"[step1][logow]overlay=(W-w)/2:(H-h)/2:enable='gte(t,{black_logo_until})'[withlogo]"
+    f"[step1][logow]overlay=(W-w)/2:(H-h)/2:enable='gte(t,{round(marble_done_at, 3)})'[withlogo]"
 )
 
 # bookend fades
-filters.append("[withlogo]fade=t=in:st=0:d=0.5,fade=t=out:st=9.5:d=0.5[vout]")
+fade_out_start = round(total_duration - 0.5, 3)
+filters.append(f"[withlogo]fade=t=in:st=0:d=0.5,fade=t=out:st={fade_out_start}:d=0.5[vout]")
 
 filter_complex = ";".join(filters)
 
@@ -84,11 +88,12 @@ cmd = [
     "-crf", "18",
     "-pix_fmt", "yuv420p",
     "-r", "30",
-    "-t", "10",
+    "-t", str(total_duration),
     "-movflags", "+faststart",
     OUT,
 ]
 
+print(f"total_duration={total_duration}s  marble_done_at={marble_done_at}s")
 print("Running ffmpeg...")
 result = subprocess.run(cmd, capture_output=True, text=True)
 print(result.returncode)
