@@ -184,6 +184,15 @@ img {
   margin-bottom: 0;
 }
 
+.statement-locations {
+  font-family: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.01em;
+  margin-top: 1.5rem;
+}
+
 /* ---------- Portfolio ---------- */
 
 .portfolio {
