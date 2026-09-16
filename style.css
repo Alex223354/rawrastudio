@@ -389,18 +389,6 @@ img {
   text-align: center;
 }
 
-.footer-questions {
-  max-width: 640px;
-  margin: 0 auto 3rem;
-}
-
-.footer-questions p {
-  font-size: 1.1rem;
-  font-weight: 300;
-  color: #333;
-  margin-bottom: 0.75rem;
-}
-
 .footer-wordmark {
   height: 20px;
   width: auto;
