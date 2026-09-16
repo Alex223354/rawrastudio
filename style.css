@@ -81,6 +81,33 @@ img {
   border-bottom: 1px solid #111;
 }
 
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #bbb;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: #999;
+  cursor: pointer;
+}
+
+.lang-btn.active {
+  color: #111;
+  border-bottom: 1px solid #111;
+}
+
+.lang-btn:hover {
+  color: #111;
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -430,6 +457,10 @@ img {
   .main-nav a {
     padding: 1rem 2rem;
     border-bottom: 1px solid #f2f2f2;
+  }
+
+  .lang-switch {
+    padding: 1rem 2rem;
   }
 
   .nav-toggle {

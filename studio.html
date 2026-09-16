@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 
@@ -19,9 +19,14 @@
       <img src="assets/wordmark.png" alt="Rawra Studio" class="logo-wordmark">
     </a>
     <nav class="main-nav">
-      <a href="studio.html" class="active">Estudio</a>
-      <a href="index.html#proyectos">Proyectos</a>
-      <a href="index.html#contacto">Contacto</a>
+      <a href="studio.html" class="active" data-en="Studio">Estudio</a>
+      <a href="index.html#proyectos" data-en="Projects">Proyectos</a>
+      <a href="index.html#contacto" data-en="Contact">Contacto</a>
+      <span class="lang-switch">
+        <button type="button" class="lang-btn" data-lang-btn="es">ES</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+      </span>
     </nav>
     <button class="nav-toggle" aria-label="Abrir menú">
       <span></span><span></span><span></span>
@@ -33,12 +38,12 @@
       <div class="founder-intro">
         <p class="founder-name">Claudia Pascual Roura</p>
         <p class="founder-title">Interior Designer</p>
-        <p>
+        <p data-en="Claudia Pascual Roura is an interior designer and founder of RAWRA Studio, with international experience in residential and hospitality projects.">
           Claudia Pascual Roura es diseñadora de interiores y fundadora de
           RAWRA Studio, con experiencia internacional en proyectos
           residenciales y hospitality.
         </p>
-        <p>
+        <p data-en="Her path began in fashion, working with luxury international brands such as Hermès, Castañer and Tom Ford, which shaped a particularly careful eye for materials, colour and detail.">
           Su trayectoria comienza en el sector de la moda, colaborando con
           marcas internacionales de lujo como Hermès, Castañer o Tom Ford,
           lo que ha definido una mirada especialmente cuidada hacia los
@@ -46,13 +51,13 @@
         </p>
       </div>
       <div class="founder-more">
-        <p>
+        <p data-en="Her time at Kettle Collective, an international architecture and interior design studio in Dubai, forged a rigorous methodology and a holistic vision, where architecture, interior design and attention to detail are conceived as one.">
           Su paso por Kettle Collective, estudio internacional de
           arquitectura e interiorismo en Dubái, consolidó una metodología
           rigurosa y una visión integral, donde arquitectura, interiorismo
           y cuidado por el detalle se conciben como un todo.
         </p>
-        <p>
+        <p data-en="Through RAWRA Studio, she develops projects that aim to create timeless, sensitive and functional spaces, guiding each client from the initial concept through to the last detail.">
           A través de RAWRA Studio, desarrolla proyectos que buscan crear
           espacios atemporales, sensibles y funcionales, acompañando a cada
           cliente desde el concepto inicial hasta los últimos detalles.
@@ -60,27 +65,27 @@
       </div>
       <div class="founder-services">
         <div class="info-col">
-          <h3 class="info-label">Servicios</h3>
+          <h3 class="info-label" data-en="Services">Servicios</h3>
           <ul class="info-list">
-            <li>Adquisición de propiedades</li>
+            <li data-en="Property Acquisition">Adquisición de propiedades</li>
             <li>Due Diligence</li>
-            <li>Planificación del emplazamiento</li>
-            <li>Diseño arquitectónico</li>
-            <li>Planificación y licencias</li>
-            <li>Construcción y obra</li>
-            <li>Dirección de proyecto</li>
-            <li>Interiorismo</li>
-            <li>Mobiliario, equipamiento e iluminación</li>
-            <li class="info-sub">Selección y restauración vintage</li>
-            <li class="info-sub">Diseño a medida</li>
-            <li>Representación del propietario</li>
+            <li data-en="Site Planning">Planificación del emplazamiento</li>
+            <li data-en="Architectural Design">Diseño arquitectónico</li>
+            <li data-en="Planning &amp; Permitting">Planificación y licencias</li>
+            <li data-en="Construction &amp; Building">Construcción y obra</li>
+            <li data-en="Project Management">Dirección de proyecto</li>
+            <li data-en="Interior Design">Interiorismo</li>
+            <li data-en="Furnishings, Fixtures, and Lighting">Mobiliario, equipamiento e iluminación</li>
+            <li class="info-sub" data-en="Vintage Sourcing &amp; Restoration">Selección y restauración vintage</li>
+            <li class="info-sub" data-en="Custom Design">Diseño a medida</li>
+            <li data-en="Owner Representation">Representación del propietario</li>
           </ul>
         </div>
         <div class="info-col">
-          <h3 class="info-label">Oficina</h3>
-          <p>Barcelona, España</p>
+          <h3 class="info-label" data-en="Office">Oficina</h3>
+          <p data-en="Barcelona, Spain">Barcelona, España</p>
 
-          <h3 class="info-label info-label--spaced">Contacto</h3>
+          <h3 class="info-label info-label--spaced" data-en="Contact">Contacto</h3>
           <p><a href="mailto:studio@rawrastudio.com">studio@rawrastudio.com</a></p>
           <p><a href="https://instagram.com/rawrastudio" target="_blank" rel="noopener">@rawrastudio</a></p>
         </div>
@@ -93,39 +98,39 @@
   </section>
 
   <section id="contacto" class="contact">
-    <h2>Hablemos</h2>
-    <p>Para colaboraciones, encargos o simplemente para saludar — nos encantaría saber de ti.</p>
+    <h2 data-en="Let's talk">Hablemos</h2>
+    <p data-en="For collaborations, commissions, or just to say hello — we'd love to hear from you.">Para colaboraciones, encargos o simplemente para saludar — nos encantaría saber de ti.</p>
     <form class="contact-form" id="contact-form">
       <input type="hidden" name="access_key" value="f7bb611c-03e4-4d4c-89f9-590f3211f16b">
       <input type="hidden" name="subject" value="Nuevo mensaje desde rawrastudio.com">
       <input type="checkbox" name="botcheck" style="display: none;" tabindex="-1" autocomplete="off">
-      <label for="email">Correo electrónico</label>
-      <input type="email" id="email" name="email" required placeholder="tu@email.com">
-      <label for="message">Mensaje</label>
-      <textarea id="message" name="message" required placeholder="Cuéntanos sobre tu proyecto..."></textarea>
-      <button type="submit">Enviar</button>
+      <label for="email" data-en="Email">Correo electrónico</label>
+      <input type="email" id="email" name="email" required placeholder="tu@email.com" data-en-placeholder="you@email.com">
+      <label for="message" data-en="Message">Mensaje</label>
+      <textarea id="message" name="message" required placeholder="Cuéntanos sobre tu proyecto..." data-en-placeholder="Tell us about your project..."></textarea>
+      <button type="submit" data-en="Send">Enviar</button>
     </form>
   </section>
 
   <footer class="site-footer">
     <div class="footer-questions">
-      <p>¿Qué pasaría si diseñáramos pensando primero en quién lo usará?</p>
-      <p>¿Y si cada proyecto empezara por preguntar «por qué», antes que «cómo»?</p>
+      <p data-en="What if we designed by thinking first about who will use it?">¿Qué pasaría si diseñáramos pensando primero en quién lo usará?</p>
+      <p data-en="And what if every project began by asking “why”, before “how”?">¿Y si cada proyecto empezara por preguntar «por qué», antes que «cómo»?</p>
     </div>
     <div class="footer-bottom">
       <img src="assets/logo-mark-real.png" alt="Rawra Studio" class="footer-logo">
-      <p>&copy; <span id="year"></span> Rawra Studio. Todos los derechos reservados.</p>
+      <p>&copy; <span id="year"></span> Rawra Studio. <span data-en="All rights reserved.">Todos los derechos reservados.</span></p>
     </div>
   </footer>
 
   <div class="cookie-banner" id="cookie-banner">
-    <p>Usamos cookies propias para mejorar tu experiencia en este sitio. Puedes aceptarlas o rechazarlas.</p>
+    <p data-en="We use our own cookies to improve your experience on this site. You can accept or decline them.">Usamos cookies propias para mejorar tu experiencia en este sitio. Puedes aceptarlas o rechazarlas.</p>
     <div class="cookie-actions">
-      <button type="button" id="cookie-reject" class="cookie-btn cookie-btn-secondary">Rechazar</button>
-      <button type="button" id="cookie-accept" class="cookie-btn cookie-btn-primary">Aceptar</button>
+      <button type="button" id="cookie-reject" class="cookie-btn cookie-btn-secondary" data-en="Decline">Rechazar</button>
+      <button type="button" id="cookie-accept" class="cookie-btn cookie-btn-primary" data-en="Accept">Aceptar</button>
     </div>
   </div>
 
-  <script src="script.js?v=4"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>

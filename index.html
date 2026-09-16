@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body class="home">
 
@@ -19,9 +19,14 @@
       <img src="assets/wordmark.png" alt="Rawra Studio" class="logo-wordmark">
     </a>
     <nav class="main-nav">
-      <a href="studio.html">Estudio</a>
-      <a href="index.html#proyectos">Proyectos</a>
-      <a href="index.html#contacto">Contacto</a>
+      <a href="studio.html" data-en="Studio">Estudio</a>
+      <a href="index.html#proyectos" data-en="Projects">Proyectos</a>
+      <a href="index.html#contacto" data-en="Contact">Contacto</a>
+      <span class="lang-switch">
+        <button type="button" class="lang-btn" data-lang-btn="es">ES</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+      </span>
     </nav>
     <button class="nav-toggle" aria-label="Abrir menú">
       <span></span><span></span><span></span>
@@ -35,7 +40,7 @@
   </section>
 
   <section class="statement">
-    <p>
+    <p data-en="Rawra Studio is a space for creativity. We build lasting solutions by first exploring the unknown, then reimagining the way design and ideas are put into practice.">
       Rawra Studio es un espacio para la creatividad. Construimos soluciones
       duraderas explorando primero lo desconocido, y después reimaginando
       la manera en que el diseño y las ideas se llevan a la práctica.
@@ -43,22 +48,22 @@
   </section>
 
   <section id="proyectos" class="portfolio">
-    <h2 class="section-title">Proyectos seleccionados</h2>
+    <h2 class="section-title" data-en="Selected projects">Proyectos seleccionados</h2>
     <div class="portfolio-grid">
       <a class="portfolio-item pf-4" href="casa-manila.html">
         <img src="assets/projects/casa-manila.jpg" alt="Casa Manila, Barcelona" loading="lazy">
         <div class="portfolio-caption">
-          <span class="portfolio-tag">Residencia privada</span>
+          <span class="portfolio-tag" data-en="Private residence">Residencia privada</span>
           <h3>Casa Manila, Barcelona</h3>
-          <p>Reforma integral · 150 m² — Arquitectura interior · Materiales · Iluminación · Mobiliario · Estilismo</p>
+          <p data-en="Full renovation · 150 sqm — Interior architecture · Materials · Lighting · Furniture · Styling">Reforma integral · 150 m² — Arquitectura interior · Materiales · Iluminación · Mobiliario · Estilismo</p>
         </div>
       </a>
       <a class="portfolio-item pf-2" href="villa-springs.html">
         <img src="assets/projects/villa-springs.jpg" alt="Villa Springs 11, Dubai" loading="lazy">
         <div class="portfolio-caption">
-          <span class="portfolio-tag">Residencia privada</span>
+          <span class="portfolio-tag" data-en="Private residence">Residencia privada</span>
           <h3>Villa Springs 11, Dubai</h3>
-          <p>Selección de materiales · Mobiliario · Iluminación</p>
+          <p data-en="Material selection · Furniture · Lighting">Selección de materiales · Mobiliario · Iluminación</p>
         </div>
       </a>
       <a class="portfolio-item pf-3" href="akasa-studio.html">
@@ -66,7 +71,7 @@
         <div class="portfolio-caption">
           <span class="portfolio-tag">Pilates studio</span>
           <h3>Akasa Studio, Dubai</h3>
-          <p>Proyecto comercial — Concepto creativo · Visualización 3D</p>
+          <p data-en="Commercial project — Creative concept · 3D visualization">Proyecto comercial — Concepto creativo · Visualización 3D</p>
         </div>
       </a>
       <a class="portfolio-item pf-3" href="casa-marina.html">
@@ -74,46 +79,46 @@
         <div class="portfolio-caption">
           <span class="portfolio-tag">Landscape</span>
           <h3>Casa Marina, Castelldefels</h3>
-          <p>Proyecto exterior y paisajismo — Diseño exterior · Paisajismo · Mobiliario · Iluminación</p>
+          <p data-en="Outdoor and landscape project — Exterior design · Landscaping · Furniture · Lighting">Proyecto exterior y paisajismo — Diseño exterior · Paisajismo · Mobiliario · Iluminación</p>
         </div>
       </a>
     </div>
   </section>
 
   <section id="contacto" class="contact">
-    <h2>Hablemos</h2>
-    <p>Para colaboraciones, encargos o simplemente para saludar — nos encantaría saber de ti.</p>
+    <h2 data-en="Let's talk">Hablemos</h2>
+    <p data-en="For collaborations, commissions, or just to say hello — we'd love to hear from you.">Para colaboraciones, encargos o simplemente para saludar — nos encantaría saber de ti.</p>
     <form class="contact-form" id="contact-form">
       <input type="hidden" name="access_key" value="f7bb611c-03e4-4d4c-89f9-590f3211f16b">
       <input type="hidden" name="subject" value="Nuevo mensaje desde rawrastudio.com">
       <input type="checkbox" name="botcheck" style="display: none;" tabindex="-1" autocomplete="off">
-      <label for="email">Correo electrónico</label>
-      <input type="email" id="email" name="email" required placeholder="tu@email.com">
-      <label for="message">Mensaje</label>
-      <textarea id="message" name="message" required placeholder="Cuéntanos sobre tu proyecto..."></textarea>
-      <button type="submit">Enviar</button>
+      <label for="email" data-en="Email">Correo electrónico</label>
+      <input type="email" id="email" name="email" required placeholder="tu@email.com" data-en-placeholder="you@email.com">
+      <label for="message" data-en="Message">Mensaje</label>
+      <textarea id="message" name="message" required placeholder="Cuéntanos sobre tu proyecto..." data-en-placeholder="Tell us about your project..."></textarea>
+      <button type="submit" data-en="Send">Enviar</button>
     </form>
   </section>
 
   <footer class="site-footer">
     <div class="footer-questions">
-      <p>¿Qué pasaría si diseñáramos pensando primero en quién lo usará?</p>
-      <p>¿Y si cada proyecto empezara por preguntar «por qué», antes que «cómo»?</p>
+      <p data-en="What if we designed by thinking first about who will use it?">¿Qué pasaría si diseñáramos pensando primero en quién lo usará?</p>
+      <p data-en="And what if every project began by asking “why”, before “how”?">¿Y si cada proyecto empezara por preguntar «por qué», antes que «cómo»?</p>
     </div>
     <div class="footer-bottom">
       <img src="assets/logo-mark-real.png" alt="Rawra Studio" class="footer-logo">
-      <p>&copy; <span id="year"></span> Rawra Studio. Todos los derechos reservados.</p>
+      <p>&copy; <span id="year"></span> Rawra Studio. <span data-en="All rights reserved.">Todos los derechos reservados.</span></p>
     </div>
   </footer>
 
   <div class="cookie-banner" id="cookie-banner">
-    <p>Usamos cookies propias para mejorar tu experiencia en este sitio. Puedes aceptarlas o rechazarlas.</p>
+    <p data-en="We use our own cookies to improve your experience on this site. You can accept or decline them.">Usamos cookies propias para mejorar tu experiencia en este sitio. Puedes aceptarlas o rechazarlas.</p>
     <div class="cookie-actions">
-      <button type="button" id="cookie-reject" class="cookie-btn cookie-btn-secondary">Rechazar</button>
-      <button type="button" id="cookie-accept" class="cookie-btn cookie-btn-primary">Aceptar</button>
+      <button type="button" id="cookie-reject" class="cookie-btn cookie-btn-secondary" data-en="Decline">Rechazar</button>
+      <button type="button" id="cookie-accept" class="cookie-btn cookie-btn-primary" data-en="Accept">Aceptar</button>
     </div>
   </div>
 
-  <script src="script.js?v=4"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>
