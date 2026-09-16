@@ -35,7 +35,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 1.4rem 2rem;
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid #eee;
@@ -48,12 +48,12 @@ img {
 }
 
 .logo-icon {
-  height: 42px;
+  height: 54px;
   width: auto;
 }
 
 .logo-wordmark {
-  height: 18px;
+  height: 24px;
   width: auto;
 }
 
@@ -404,7 +404,7 @@ img {
 
 @media (max-width: 480px) {
   .logo-wordmark {
-    height: 14px;
+    height: 18px;
   }
 }
 
