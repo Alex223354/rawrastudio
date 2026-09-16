@@ -651,8 +651,9 @@ img {
 }
 
 .project-meta {
-  color: #666;
-  margin-bottom: 0.25rem;
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 0.4rem;
 }
 
 .project-services {
