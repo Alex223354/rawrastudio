@@ -110,8 +110,9 @@ const heroVideo = document.querySelector(".hero-video");
 const statementSection = document.querySelector(".statement");
 
 if (heroVideo && statementSection) {
-  // matches marble_done_at in assets/video/build_hero_video.py
-  const AUTOSCROLL_DELAY_MS = 3600;
+  // matches total_duration in assets/video/build_hero_video.py -- scrolls
+  // right as the reel finishes its first full play, before it loops
+  const AUTOSCROLL_DELAY_MS = 12000;
   setTimeout(() => {
     if (window.scrollY < 50) {
       statementSection.scrollIntoView({ behavior: "smooth" });
