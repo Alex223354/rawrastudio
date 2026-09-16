@@ -8,29 +8,28 @@
   <link rel="icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=8">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400&family=Hanken+Grotesk:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=9">
 </head>
 <body class="home">
 
   <header class="site-header">
-    <a href="index.html" class="logo">
-      <img src="assets/logo-mark-real.png" alt="" class="logo-icon">
-      <img src="assets/wordmark.png" alt="Rawra Studio" class="logo-wordmark">
-    </a>
+    <button class="nav-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
     <nav class="main-nav">
       <a href="studio.html" data-en="Studio">Estudio</a>
       <a href="index.html#proyectos" data-en="Projects">Proyectos</a>
       <a href="index.html#contacto" data-en="Contact">Contacto</a>
-      <span class="lang-switch">
-        <button type="button" class="lang-btn" data-lang-btn="es">ES</button>
-        <span aria-hidden="true">/</span>
-        <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
-      </span>
     </nav>
-    <button class="nav-toggle" aria-label="Abrir menú">
-      <span></span><span></span><span></span>
-    </button>
+    <a href="index.html" class="logo logo--center">
+      <img src="assets/logo-mark-real.png" alt="Rawra Studio" class="logo-icon">
+    </a>
+    <span class="lang-switch">
+      <button type="button" class="lang-btn" data-lang-btn="es">ES</button>
+      <span aria-hidden="true">/</span>
+      <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+    </span>
   </header>
 
   <section class="hero">
@@ -40,11 +39,10 @@
   </section>
 
   <section class="statement">
-    <p data-en="Rawra Studio is a space for creativity. We build lasting solutions by first exploring the unknown, then reimagining the way design and ideas are put into practice.">
-      Rawra Studio es un espacio para la creatividad. Construimos soluciones
-      duraderas explorando primero lo desconocido, y después reimaginando
-      la manera en que el diseño y las ideas se llevan a la práctica.
-    </p>
+    <p data-en="RAWRA Studio is an interior design studio with a contemporary outlook.">RAWRA Studio es un estudio de interiorismo de mirada contemporánea.</p>
+    <p data-en="We understand the Mediterranean as a way of life, not a style. We carry that sensibility into every project through light, materials, craft, and the mix of architecture, furniture, art and objects.">Entendemos el Mediterráneo como una manera de vivir, no como un estilo. Esa sensibilidad la trasladamos a cada proyecto a través de la luz, los materiales, el oficio y la mezcla de arquitectura, mobiliario, arte y objetos.</p>
+    <p data-en="Interiors with character, designed for a place and for those who live in it, down to the last piece.">Interiores con carácter, pensados para un lugar y para quienes lo habitan, hasta la última pieza.</p>
+    <p data-en="A small studio, with a big footprint.">Un estudio pequeño, con una huella grande.</p>
   </section>
 
   <section id="proyectos" class="portfolio">
@@ -119,6 +117,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=8"></script>
+  <script src="script.js?v=9"></script>
 </body>
 </html>
